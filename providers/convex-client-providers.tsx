@@ -1,5 +1,6 @@
 "use client";
 
+import { Loading } from "@/components/auth/Loading";
 import { ClerkProvider, useAuth } from "@clerk/nextjs";
 import {
   AuthLoading,
@@ -24,9 +25,9 @@ export const ConvexClientProvider = ({
   return (
     <ClerkProvider afterSignInUrl="/sign-up">
       <ConvexProviderWithClerk useAuth={useAuth} client={convex}>
-        {/* <AuthLoading>
+        <AuthLoading>
           <Loading />
-        </AuthLoading> */}
+        </AuthLoading>
         <Authenticated>{children}</Authenticated>
         <Unauthenticated>{children}</Unauthenticated>
       </ConvexProviderWithClerk>

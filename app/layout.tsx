@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ChatGPT clone",
-  description: "Chat with A.I",
+  description: "Chat with A.I.",
 };
 
 export default function RootLayout({
